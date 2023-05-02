@@ -33,4 +33,4 @@ public class PrintStars8 {
             System.out.println();
         }
     }
-}
+}//휴
