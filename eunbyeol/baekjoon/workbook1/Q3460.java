@@ -7,7 +7,6 @@ public class Q3460 {
         Scanner sc = new Scanner(System.in);
         int testCase = sc.nextInt();
 
-
          for(int i = 0; i < testCase; i++){
              int val = sc.nextInt();
              String binary = Integer.toBinaryString(val);
