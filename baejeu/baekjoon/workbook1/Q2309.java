@@ -1,4 +1,4 @@
-package baejeu.baekjoon.groupworkbook;
+package baejeu.baekjoon.workbook1;
 
 
 import java.util.Arrays;

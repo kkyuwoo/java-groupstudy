@@ -1,4 +1,4 @@
-package baejeu.baekjoon.groupworkbook;
+package baejeu.baekjoon.workbook1;
 
 /*
 지능형 기차 2

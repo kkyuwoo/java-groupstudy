@@ -1,4 +1,4 @@
-package baejeu.baekjoon.groupworkbook;
+package baejeu.baekjoon.workbook1;
 /*
 약수 구하기
 6을 예로 들면
