@@ -39,6 +39,10 @@ public class Q2167Fast {
                     sum += arr[j][k];
                 }
             }
+            String answer = sum + "\n";
+            bufferedWriter.write(answer);
         }
+        bufferedWriter.flush();
+        bufferedWriter.close();
     }
 }
