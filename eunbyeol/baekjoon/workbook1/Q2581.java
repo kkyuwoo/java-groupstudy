@@ -8,14 +8,14 @@ public class Q2581 {
         int start = sc.nextInt();
         int end = sc.nextInt();
         int min = -1;
-
-        boolean isPrime = true;
         int sum = 0;
 
         for(int i = start; i <= end; i++){
+            //for문 밖에쓰면 false로 전환이 안된다
+            boolean isPrime = true;
             if(i == 1) continue;
 
-            for(int j = 2; j <= i / 2 ; j++){
+            for(int j = 2; j < i / 2 ; j++){
                 //소수가 아닐 때
                 if (i % j == 0){
                     isPrime = false;
