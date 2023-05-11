@@ -21,6 +21,7 @@ public class Q2167Fast {
                 arr[i][j] = Integer.parseInt(stringTokenizer.nextToken());
             }
         }
+
         //TestCase number 입력받기
         stringTokenizer = new StringTokenizer(bufferedReader.readLine());
         int testCaseNumber = Integer.parseInt(stringTokenizer.nextToken());

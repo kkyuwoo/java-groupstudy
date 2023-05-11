@@ -12,6 +12,7 @@ public class Q1292 {
         int length = 0;
         int sum = 0;
 
+        //주어진 범위의 마지막까지 수열을 만들기
         for (int i = 0; i < end; i++) {
             for (int j = 0; j < value; j++) {
                 intArr[i] = value;
@@ -22,9 +23,10 @@ public class Q1292 {
                     break;
                 }
             }
-            i--;
+            i--; //수 할당이 끝나고 마지막에 idx수정
             value++;
         }
+        //합계
         for (int i = start; i < end; i++) {
             sum += intArr[i];
         }
