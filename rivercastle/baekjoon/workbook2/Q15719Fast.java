@@ -6,32 +6,28 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Q15719Fast {
-
-    public long sumToNMinus1(int givenNumber) {
+    public long sumOfArr(String line, int num) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer stringTokenizer;
+        stringTokenizer = new StringTokenizer(line);
         long sum = 0;
-        for (int i = 1; i < givenNumber; i++) {
-            sum += i;
+        for (int i = 0; i < num; i++) {
+            sum += Integer.parseInt(stringTokenizer.nextToken());
         }
         return sum;
     }
 
+    public long sumOfUntilN(int number) {
+        return (long) (number * (number - 1)) / 2;
+    }
+
     public static void main(String[] args) throws IOException {
         Q15719Fast q15719Fast = new Q15719Fast();
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stringTokenizer;
-
-        int givenNumber = Integer.parseInt(bufferedReader.readLine());
-        long sumToMinus1 = q15719Fast.sumToNMinus1(givenNumber);
-
-        stringTokenizer = new StringTokenizer(bufferedReader.readLine());
-        long sum = 0;
-
-        for (int i = 0; i < givenNumber; i++) {
-            sum += Integer.parseInt(stringTokenizer.nextToken());
-        }
-
-        System.out.println(sum - sumToMinus1);
-        bufferedReader.close();
+        int num = Integer.parseInt(bf.readLine());
+        long target = q15719Fast.sumOfUntilN(num); // n-1 까지의 합
+        System.out.println(q15719Fast.sumOfArr(bf.readLine(), num) - target);
+        bf.close();
     }
 }
-
