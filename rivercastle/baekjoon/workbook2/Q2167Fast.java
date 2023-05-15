@@ -8,6 +8,7 @@ public class Q2167Fast {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer stringTokenizer;
+
         //배열 크기 입력받기
         stringTokenizer = new StringTokenizer(bufferedReader.readLine());
         //배열 생성하기
