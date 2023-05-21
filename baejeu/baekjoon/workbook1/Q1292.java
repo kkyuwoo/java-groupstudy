@@ -15,7 +15,6 @@ import java.io.IOException;
  */
 public class Q1292 {
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // 수열 만들기
         //  1 2 2 3 3 3 4 4 4 4 ...  구간 3~7 더하기는 15이다.

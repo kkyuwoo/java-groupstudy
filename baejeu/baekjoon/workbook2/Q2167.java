@@ -15,7 +15,6 @@ public class Q2167 {
                 Array[i][j] = sc.nextInt();            // 값 넣기
             }
         }
-
         int k = sc.nextInt(); // 합을 구할 부분의 개수 k
 
         for (int cnt = 0; cnt < k ; cnt++) {
@@ -28,7 +27,6 @@ public class Q2167 {
             System.out.println(sum);
         }
     }
-
     public static int Printsum (int i, int j, int x, int y, int[][]Array ){
         int sum = 0;
 
@@ -37,11 +35,8 @@ public class Q2167 {
                 sum = sum+ Array[k][l];
             }
         }
-
-
         return sum;
     }
-
 }
 
 /*

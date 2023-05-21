@@ -15,7 +15,7 @@ public class Q15719 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int input = Integer.parseInt(br.readLine());
+        long input = Integer.parseInt(br.readLine());
         long realSum = (input) * (input-1) / 2;  // 1~n-1까지(n-1)포함 더하는 값
 
         StringTokenizer st = new StringTokenizer(br.readLine());
