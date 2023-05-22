@@ -14,17 +14,16 @@ public class Q1205 {
             arr[i] = sc.nextInt();
         }
         Arrays.sort(arr, Collections.reverseOrder());
-        if(n == p && news <= arr[arr.length-1])
+        if(n == p && news <= arr[n-1])
             System.out.print(-1);
         else{
-            int rank = 1;
-            for(int i=0; i<arr.length; i++){
+            for(int i=0; i<n; i++){
                 if(news < arr[i])
-                    rank++;
+                    result++;
                 else
                     break;
             }
-            System.out.print(rank);
+            System.out.print(result);
         }
     }
 }
