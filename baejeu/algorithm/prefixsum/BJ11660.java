@@ -18,6 +18,7 @@ public class BJ11660 {
             }
         }
         int [][] prefixsum = makePrefixSum(arr , N);
+        System.out.println(Arrays.deepToString(prefixsum));
         for (int i = 0; i < M ; i++) {
             int x1 = sc.nextInt();
             int x2 = sc.nextInt();

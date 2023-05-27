@@ -11,16 +11,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-public class Q15719 {
+public class Q15719 { // int 범위  -2,147,483,648부터 2,147,483,647까지의 범위
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        long input = Integer.parseInt(br.readLine());
-        long realSum = (input) * (input-1) / 2;  // 1~n-1까지(n-1)포함 더하는 값
-
+        long input = Integer.parseInt(br.readLine());  // 2 ≤ N ≤ 10,000,000
+        long realSum = (input) * (input-1) / 2;  // 1~n-1까지(n-1)포함 더하는 값 N*N 이면 int 범위 초과
+        //
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        long sum =0;
+        long sum = 0;
         for (int i = 0; i < input ; i++) {
             sum += Long.parseLong(st.nextToken());
         }
