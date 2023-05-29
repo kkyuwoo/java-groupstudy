@@ -1,14 +1,28 @@
 package rivercastle.programmers;
 
-public class Solution181862 {
-    public String[] solution(String myStr) {
+import java.util.ArrayList;
+import java.util.List;
+
+class Solution181862 {
+    public List<String> solution(String myStr) {
         String[] splitters = new String[] {"a", "b", "c"};
 
         for (String splitter : splitters) {
-            myStr = myStr.replaceFirst(splitter, " ");
+            myStr = myStr.replaceAll(splitter, " ");
         }
 
-        String[] answer = myStr.split(" ");
+        String[] splitted = myStr.split(" ");
+
+        List<String> answer = new ArrayList<>();
+
+        for (String element : splitted) {
+            if (!element.equals("")) {
+                answer.add(element);
+            }
+        }
+        if (answer.size() == 0) {
+            answer.add("EMPTY");
+        }
 
         return answer;
     }
