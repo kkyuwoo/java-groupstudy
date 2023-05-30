@@ -8,12 +8,15 @@ public class Q10988 {
         Stack<String> stackStr = new Stack<>();
         Scanner scanner = new Scanner(System.in);
         String word = scanner.next();
+
         String[] alphabets = word.split("");
 
         for (String alphabet : alphabets) {
             stackStr.push(alphabet);
         }
+
         String answer = "";
+
         while (!stackStr.empty()) {
             answer += stackStr.pop();
         }
