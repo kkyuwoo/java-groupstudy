@@ -1,4 +1,4 @@
-package gyuri.baekjoon.workbook3;
+package gyuri.baekjoon.workbook4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
