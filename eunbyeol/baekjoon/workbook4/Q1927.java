@@ -1,9 +1,9 @@
-package eunbyeol.baekjoon.workbook3;
+package eunbyeol.baekjoon.workbook4;
 
 import java.io.*;
 import java.util.PriorityQueue;
 
-public class Q11286 {
+public class Q1927 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -12,14 +12,9 @@ public class Q11286 {
         int[] arr = new int[N];
 
         //낮은 숫자가 우선 순위인 큐 선언
-        //큐에 값을 담을 때 값을 비교해서 담는다
-        PriorityQueue<Integer> priorityQueueLowest = new PriorityQueue<>((num1, num2) -> {
-            int abs1 = Math.abs(num1);
-            int abs2 = Math.abs(num2);
-            //절대값이 같을 때
-            return abs1 == abs2 ? Integer.compare(num1, num2) : Integer.compare(abs1, abs2);
-        });
+        PriorityQueue<Integer> priorityQueueLowest = new PriorityQueue<>();
 
+        //배열에 값 넣기
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(br.readLine());
         }
@@ -27,15 +22,19 @@ public class Q11286 {
         for (int i = 0; i < N; i++) {
             //배열 값이 0 일때
             if (arr[i] == 0){
+                //큐 사이즈가 0 이면 0 출력
                 if (priorityQueueLowest.size() == 0) bw.write(Integer.toString(0) + "\n");
-                else  {
-                    bw.write(Integer.toString(priorityQueueLowest.poll()) + "\n");
-                }
+                //사이즈가 0 아니면 첫번째 값 반환하고 제거
+                else  bw.write(Integer.toString(priorityQueueLowest.poll()) + "\n");
             }else {
-                 priorityQueueLowest.offer(arr[i]);
+                //배열 값이 0 아닐때 큐에 값 삽입
+                //값을 삽일할때 add() 보다 offer()를 사용하는 것이 예외처리에 더 안전하다
+                priorityQueueLowest.offer(arr[i]);
             }
         }
         bw.flush();
         bw.close();
+
+
     }
 }

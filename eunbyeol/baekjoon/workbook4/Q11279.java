@@ -1,4 +1,4 @@
-package eunbyeol.baekjoon.workbook3;
+package eunbyeol.baekjoon.workbook4;
 
 import java.io.*;
 import java.util.Collections;
