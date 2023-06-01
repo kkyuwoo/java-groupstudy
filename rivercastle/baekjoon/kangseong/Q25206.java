@@ -10,7 +10,7 @@ public class Q25206 {//너의 평점은
         String gradeData = bufferedReader.readLine();
         double sum = 0.0;
         int cnt = 0;
-        while (!gradeData.equals("")) {
+        for (int i = 0; i < 20; i++) {
             String[] dataArr = gradeData.split(" ");
             double credit = Double.parseDouble(dataArr[1]);
 
@@ -41,12 +41,9 @@ public class Q25206 {//너의 평점은
             } else if (dataArr[2].equals("F")) {
                 cnt += credit;
             }
-
             gradeData = bufferedReader.readLine();
         }
-
         bufferedReader.close();
-
         System.out.println(sum / cnt);
     }
 }
