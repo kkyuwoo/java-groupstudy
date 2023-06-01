@@ -11,7 +11,6 @@ public class Q11279 {
     public static void main(String[] args) throws IOException {
 
         PriorityQueue<Integer> minHeap = new PriorityQueue<>(Collections.reverseOrder());
-
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
