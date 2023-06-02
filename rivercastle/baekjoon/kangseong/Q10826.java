@@ -1,4 +1,4 @@
-package rivercastle.baekjoon.trying;
+package rivercastle.baekjoon.kangseong;
 
 import java.math.BigInteger;
 import java.util.Arrays;
