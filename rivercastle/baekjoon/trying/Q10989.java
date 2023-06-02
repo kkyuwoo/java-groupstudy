@@ -1,4 +1,4 @@
-package rivercastle.baekjoon.kangseong;
+package rivercastle.baekjoon.trying;
 
 import java.io.*;
 import java.util.PriorityQueue;
